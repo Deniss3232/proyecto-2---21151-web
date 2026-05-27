@@ -2,9 +2,19 @@
 
 ## Descripción
 
-Este proyecto consiste en una calculadora desarrollada con React y TypeScript.
+Este proyecto consiste en una calculadora desarrollada utilizando React y TypeScript.
 
-La aplicación permite realizar operaciones matemáticas básicas utilizando un teclado numérico hecho con componentes reutilizables. También incluye validaciones especiales solicitadas en el proyecto, como el límite de caracteres y manejo de errores.
+La aplicación fue creada utilizando componentes reutilizables y un hook personalizado para manejar la lógica de las operaciones matemáticas.
+
+La calculadora incluye validaciones especiales solicitadas en el proyecto, como:
+
+- límite máximo de 9 caracteres
+- manejo de errores
+- números negativos
+- operaciones básicas
+- operaciones extra
+- pruebas automatizadas
+- documentación visual con Storybook
 
 ---
 
@@ -13,23 +23,40 @@ La aplicación permite realizar operaciones matemáticas básicas utilizando un 
 - React
 - TypeScript
 - Vite
-- Storybook
 - Vitest
+- Storybook
 - ESLint
 
 ---
 
-## Funcionalidades
+## Funcionalidades implementadas
+
+### Operaciones básicas
 
 - Suma
 - Resta
 - Multiplicación
 - División
-- Módulo
+- Igualdad
+
+### Funcionalidades extra
+
+- Operación módulo
 - Punto decimal
 - Cambio de signo (+/-)
+- Botón de limpieza
 - Manejo de errores
-- Límite de 9 caracteres
+- Validación de límite de caracteres
+
+---
+
+## Reglas implementadas
+
+- El display no permite más de 9 caracteres
+- Los números negativos muestran ERROR
+- Los números demasiado grandes muestran ERROR
+- El punto decimal cuenta dentro del límite
+- Los números adicionales después del límite son ignorados
 
 ---
 
@@ -41,7 +68,7 @@ Clonar el repositorio:
 git clone https://github.com/Deniss3232/proyecto-2---21151-web.git
 ```
 
-Entrar a la carpeta:
+Entrar a la carpeta del proyecto:
 
 ```bash
 cd proyecto-2---21151-web
@@ -75,6 +102,27 @@ npm test
 
 ```bash
 npm run storybook
+```
+
+---
+
+## Cómo correr el lint
+
+```bash
+npm run lint
+```
+
+---
+
+## Estructura del proyecto
+
+```text
+src/
+ ├── components/
+ ├── hooks/
+ ├── stories/
+ ├── App.tsx
+ └── main.tsx
 ```
 
 ---
